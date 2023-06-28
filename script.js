@@ -1,46 +1,57 @@
-// function declaration / function definition
-function sayHello(firstName = 'Joseph', lastName = 'Oluwadamilare') {
-    //functionb body
-    console.log('Hello',);
-    console.log(firstName);
-    console.log(lastName);
-}
+//function declaration
+//function helloAgain(firstName) {
+ //   console.log(`Hello ${firstName}`);
+//}
+//function expression
+//const hello =function (firstName) {
+  // console.log(`Hello ${firstName}`);
+//}
+//helloAgain('Boss Man');
+//hello('Man')
 
-// function call / invoke / executing / run
-sayHello('Samuel', 'Akinbomi')
-sayHello('Favour', 'Mendy')
-sayHello();
+const hello = firstName =>  `Hello ${firstName}`;
+console.log(hello('Joskin'))
 
-function add(num1, num2) {
-    const sum = num1 + num2;
+//another example of the shortcut
 
-    // if the function wnt to return any value, the we use the return keyword at the end of the function
+//const add = function(num1, num2) {
+    //const sum = num1 + num2;
 
-return sum;
-}
-
-const result = add(2, 3);
-console.log(result);
+   // return sum;
+//}
 
 
-function sayHelloAgain(firstName = 'Joseph', lastName = 'Oluwadamilare') {
-    return `Hello, ${firstName} ${lastName}`;
-}
+//short cut
+const add = (num1, num2) => 
+    num1 + num2;
 
+
+
+console.log(add(2,5));
+
+//IIFE -Immediately Invokable Function Expression
+
+//(function(firstName) {
+   // console.log(`Hello ${firstName}`);
+//})();
 
 const person = {
-    firstName: 'Oluwadamilare',
-    'last-name': 'Akinbomi',
-    age: 20,
-    address: {
-        street: '12 Dada street',
-        city: 'Lagos',
-        country: 'Nigeria',
-    },
-    howOldAmI: function() {
-        console.log(`I am ${this.age} years old.`);
+  firstName: 'Oluwadamilare',
+  'last-name': 'Akinbomi',
+  age: 20,
+  howOldAmI() {
+      console.log(`I am ${this.age} years old.`);
 
-    }
- };
+  }
+};
 
- person.howOldAmI();
+person.howOldAmI();
+
+//call back function
+const button = document.querySelector('button');
+
+const greeting = function() {
+  console.log('Hello there!');
+}
+
+button.addEventListener('click', greeting)
