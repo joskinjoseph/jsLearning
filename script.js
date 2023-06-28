@@ -1,39 +1,45 @@
-let age = 40;
+const person = {
+    firstName: 'Oluwadamilare',
+    'last-name': 'Akinbomi',
+    age: 20,
+    isCool: false,
+    hobbies: ['video games', 'watching movie', 'sleeping'],
+    address: {
+        street: '3 Dada st.',
+        city: 'Lagos',
+        country: 'Nigeria',
+    },
+    howOldAmI: function() {
+        console.log(`I am ${age} years old.`);
 
-const isOld = age >=30;
-const isCool = false;
+    }
+ };
 
-// console.log(isOld);
-// console.log(isCool);
+ //console.log(person.firstName)
+ // console.log(person['last-name']);
 
-// Comparisons
-// console.log(4 > 2);
-// console.log(4 >= 2);
-// console.log(4 < 2);
-// console.log(4 <= 2);
+person.hairColor ='black';
 
-// //Equality: Strict Equality === vs Loose Equality ==
-// console.log(4 === '4');
-// console.log(4 == '4');
-// // console.log(4 === 4);
-// console.log(4 == 4);
-// // console.log(4 !=== '4');
-// console.log(4 !== '4');
+delete person.isCool;
 
-//LOgical Operations
-// console.log(true && true);
-// console.log(true && false);
-// console.log(false && false);
-// console.log(false && true);
+//person.howOldAmI();
 
-console.log(true || true);
-console.log(true || false);
-console.log(false || false); 
-console.log(false || true);
+ //console.log(person)
 
+ const groupOfPeople = [
+    {
+        name: 'Joskin',
+        age: 20,
+    },
+    {
+        name: 'Samuel',
+        age: 22,
+    },
+    {
+        name: 'Favour',
+        age: 30,
+    },
 
-//convert boolean to a string
-console.log(isOld.toString());
+ ];
 
-// Truthy vs Falsy
-console.log(Boolean("joskin"));
+ console.log(groupOfPeople);
