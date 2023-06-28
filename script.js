@@ -1,47 +1,39 @@
-//Variables
-let num1 = 4;
-let num2 = 2;
-const num3 = 4.5;
-const num4 = -4.5;
+let age = 40;
 
-//Basic Maths
-console.log(num1 + num2);
-console.log(num1 - num2);
-console.log(num1 * num2);
-console.log(num1 / num2);
+const isOld = age >=30;
+const isCool = false;
 
-//Floating point inaccuracy
-console.log(0.1 + 0.2);
-console.log(5.01 + 0.02);
+// console.log(isOld);
+// console.log(isCool);
 
-//Other Operations
+// Comparisons
+// console.log(4 > 2);
+// console.log(4 >= 2);
+// console.log(4 < 2);
+// console.log(4 <= 2);
 
-//This only shows the remainder after division
+// //Equality: Strict Equality === vs Loose Equality ==
+// console.log(4 === '4');
+// console.log(4 == '4');
+// // console.log(4 === 4);
+// console.log(4 == 4);
+// // console.log(4 !=== '4');
+// console.log(4 !== '4');
 
-console.log(13 % 5);
-console.log(4 % 2);
-console.log(5 ** 5);
+//LOgical Operations
+// console.log(true && true);
+// console.log(true && false);
+// console.log(false && false);
+// console.log(false && true);
 
-// //increament and decrement
-// // num1 = num1 + 1;
-// // an alternative way of writing the above is
-//  num1++;
-//  console.log(num1);
-// // // num2 = num2 - 1;
-// // // alternative way to write this is
-//  num2--;
-//  console.log(num2);
-// // // num1 = num1 + 2;
-// // //alternative
-// // num1 += 2;
-// // console.log(num2);
+console.log(true || true);
+console.log(true || false);
+console.log(false || false); 
+console.log(false || true);
 
-//comparison
-console.log(num1 > num2);
-console.log(num1 >= num2);
-console.log(num1 < num2);
-console.log(num1 <= num2);
-console.log(num1 == num2);
-console.log(num1 === num2);
-console.log(num1 != num2);
-console.log(num1 !== num2);
+
+//convert boolean to a string
+console.log(isOld.toString());
+
+// Truthy vs Falsy
+console.log(Boolean("joskin"));
