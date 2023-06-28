@@ -1,121 +1,81 @@
-const age = 50;
+const genderTerms = 'transGender';
 
-const drinkingAge = 19;
-
-
-// if (age >= drinkingAge) {
-
-//   console.log('I can  drink beer!!!')
-
-// } else {
-
-//   console.log('I cannot drink beer!!!')
-
-// }
-
-const passwordTypedIn = 'somepassword';
-
-const actualPassword = 'password';
-
-
-if (passwordTypedIn === actualPassword) {
-
-  console.log('Correct password, logging you in.')
-
+if (genderTerms === 'male') {
+    console.log('Gents');
+} else if (genderTerms === 'female') {
+    console.log('Ladies');
+} else if (genderTerms === 'transGender') {
+    console.log('Toilet');
 } else {
-
-  console.log('Incorrect password. Please try again.')
-
+    console.log('FUCK OFF!!!');
 }
 
 
-//logical operators
-
-
-const month = 'Septemeber';
-
-const day = 31;
-
-
-if (month === 'Septemeber' && day === 31) {
-
-  console.log('It is Halloween')
-
-} else {
-
-  console.log('It is not Halloween!!!')
-
+switch (genderTerms) {
+    case 'male':
+        console.log('Gents');
+        break;
+    case 'female':
+        console.log('Ladies');
+        break;
+    case 'transGender':
+         console.log('Toilet');
+         break;    
+   default:
+        console.log('FUCK OFF!!!');
 }
+// SWitch statement is  checking for strictly quality
 
+// And what if its not strict (===) but corresponding (> or< or others)?.. Then..
 
-//when we have multiple instances we use LS
-
-const grade = 0;
-
+const grade = 85
 
 if (grade >= 80) {
-
-  console.log('Letter Grade: A')
-
-} else if (grade >= 70) {
-
-  console.log('Letter Grade: B')
-
-} else if (grade >= 60) {
-
-  console.log('Letter Grade: C')
-
-} else if (grade >= 50) {
-
-  console.log('Letter Grade: D')
-
-} else {
-
-  console.log('Letter Grade: F')
-
-}
-
-//Note: it start reading from up to find the most valid statement. or simply say that it start to find the first true condition from the top
-
-//Tenary ----short form of the LS
-
-//and this can only work with a single line statement
-
-//reverting back to the first code.........
-
-// if (age >= drinkingAge) {
-
-//   console.log('I can  drink beer!!!')
-
-// } else {
-
-//   console.log('I cannot drink beer!!!')
-
-// }
+    console.log('Letter Grade: A')
+  } else if (grade >= 70) {
+    console.log('Letter Grade: B')
+  } else if (grade >= 60) {
+    console.log('Letter Grade: C')
+  } else if (grade >= 50) {
+    console.log('Letter Grade: D')
+  } else {
+    console.log('Letter Grade: F')
+  }
 
 
-age >= drinkingAge ?   console.log('I can  drink beer!!!') : console.log('I cannot drink beer!!!')
+  switch (true) {
+    case grade >= 60:
+        console.log('Letter Grade: A');
+        break;
+    case grade >= 70:
+        console.log('Letter Grade: B');
+        break;
+    case grade >= 60:
+         console.log('Letter Grade: C');
+         break;
+    case grade >= 50:
+        console.log('Letter Grade: D');
+        break;     
+   default:
+         console.log('Letter Grade: F');
+  }
 
-// let canIDrinkMessage;
+      
+  const animal = 'Cow'
 
-// if (age >= drinkingAge) {
+  switch(animal) {
+case 'Cow':
+console.log('I am a cow');
+case 'Giraffe':
+console.log('I am a Giraffe');
+case 'Dog':
+case 'Pig':
+console.log('This animal is NOT extinct');
+break;
+case 'Dinosaur':
+case 'Dodo':
+    default:
+        console.log('This animal is extinct');    
+  }
 
-//   canIDrinkMessage = 'I can  drink beer!!!';
 
-// } else {
-
-//   canIDrinkMessage = 'I cannot drink beer!!!';
-
-// }
-
-// let canIDrinkMessage = age >= drinkingAge
-
-//  ? 'I can  drink beer!!!': 
-
-//  'I cannot drink beer!!!';
-
- console.log(age >= drinkingAge
-
-    ? 'I can  drink beer!!!': 
-
-    'I cannot drink beer!!!');
