@@ -1,59 +1,47 @@
-//Global scope
+let a = 'hi';
+let b = a;
+b = b+ ' there';  
 
-// let message = 'hello';
-// var greeting = 'hi';
+console.log(a);
+console.log(b);
 
+let c = [1, 2];
+let d = c;
+d.push(3);
 
-// console.log(message);
-// console.log(greeting);
-
-// if (true) {
-// console.log(message);
-// console.log(greeting);
-// }
-
-
-//Function Scope
-
-// function sayHello() {
-//   let message = 'hello';
-//   var greeting = 'hi';
-
-//   console.log(message);
-//   console.log(greeting);
-
-//   function nested() {
-//     console.log(message);
-//   console.log(greeting);
-//   }
-//   nested();
-// }
-
-// sayHello();
-
-//Block Scope
-
-// if (true) {
-//   let message = 'hello';
-//   var greeting = 'hi';
-
-//   console.log(message);
-//   console.log(greeting);
-// }
-
-// let message = 'joskin';
-
-// console.log(message);
+console.log(c);
+console.log(d);
 
 
-// for (let i = 0; i < 5; i++) {
-//   console.log(`i is ${i}`);
-// }
+let num1 = 2;
+let num2 = 3;
 
-// console.log(i);
+function add(param1, param2) {
+  return param1 + param2;
+}
+
+const result = add (num1, num2);
+console.log(result);
+
+const myArray = ['a', 'b'];
+
+function appendToArray(someArray) {
+  someArray.push('c');
+  return someArray;
+}
+
+const arrayResult = appendToArray(myArray);
+console.log(myArray);
+console.log(arrayResult);
 
 
-(function() {
-  const alert = 'error';
-  console.log(alert);
-}) ();
+const x ={name: 'Andre'};
+const y ={name: 'Andre'};
+const z = x;
+z.name = 'Bob';
+
+console.log(x === y);
+console.log(x);
+console.log(y);
+console.log(z);
+
