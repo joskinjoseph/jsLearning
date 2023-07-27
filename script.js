@@ -1,47 +1,116 @@
-let a = 'hi';
-let b = a;
-b = b+ ' there';  
+ function convertMinutesIntoSeconds(minutes) {
+  return minutes * 60;
+ }
 
-console.log(a);
-console.log(b);
+//  console.log(convertMinutesIntoSeconds(5));
+//  console.log(convertMinutesIntoSeconds(10));
 
-let c = [1, 2];
-let d = c;
-d.push(3);
+function ensureQuestionMark(str) {
+  const lastChar =str.charAt(str.length-1);
 
-console.log(c);
-console.log(d);
+  // if (lastChar === '?') {
+  //   return str;
+  // } 
+
+  //   return `${str}?`;
 
 
-let num1 = 2;
-let num2 = 3;
+  return lastChar === '?' ? str: `${str}'?'`;
+  }
 
-function add(param1, param2) {
-  return param1 + param2;
+// console.log(ensureQuestionMark('Joskin'));
+// console.log(ensureQuestionMark('Man?'));
+// console.log(ensureQuestionMark('music'));
+
+function maxOfNumber(numbers) {
+  let maxNumber = numbers[0];
+ 
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > maxNumber) {
+      maxNumber= numbers[i];
+    }
+  }
+
+  numbers.forEach(number => {
+    if (number > maxNumber) {
+      maxNumber = number
+    }
+  });
+  return maxNumber;
+
+  return Math.max(...numbers);
 }
 
-const result = add (num1, num2);
-console.log(result);
+console.log(maxOfNumber([1, 2, 3]));
+console.log(maxOfNumber([1, 2, 3, 10]));
 
-const myArray = ['a', 'b'];
+function sarcasticCase(str) {
+  let newString = '';
 
-function appendToArray(someArray) {
-  someArray.push('c');
-  return someArray;
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
+      newString = newString + str[i].toUpperCase();
+    } else {
+      newString = newString + str[i].toLowerCase();
+    }
+  }
+
+  return newString;
 }
 
-const arrayResult = appendToArray(myArray);
-console.log(myArray);
-console.log(arrayResult);
+// console.log(sarcasticCase('Hello there'));
+// console.log(sarcasticCase('React is a library'));
 
+function noSpace(str) {
+  // let newString = '';
 
-const x ={name: 'Andre'};
-const y ={name: 'Andre'};
-const z = x;
-z.name = 'Bob';
+  // for (let i = 0; i < str.length; i++) {
+  //   if (str[i] !== ' ') {
+  //     newString = newString + str[i];
+  //   }
+  // }
 
-console.log(x === y);
-console.log(x);
-console.log(y);
-console.log(z);
+  // return newString;
 
+  return str.split(' ').join('');
+}
+
+// console.log(noSpace('Hafa my Guy'));
+// console.log(noSpace('I dey Boss'));
+
+function squareSum(numbers) {
+//   let result = 0;
+
+//   numbers.forEach(number => {
+//      result += (number * number);
+//   });
+
+//   return result;
+
+ return numbers
+  .map(number => number * number)
+  .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+}
+ 
+// console.log(squareSum([1,2,3]));
+// console.log(squareSum([3,5]));
+
+function positiveSum(numbers) {
+  // let total = 0;
+
+  // numbers.forEach(number => {
+  //   if (number > 0) {
+  //      total += number;
+  //   }
+  // })
+
+  // return total;
+
+  return numbers
+    .filter(number => number > 0)
+    .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+
+}
+
+console.log(positiveSum ([1, 2, -3, 4, 5]));
+console.log(positiveSum ([2, -33, -4, 100]));
